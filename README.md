@@ -35,7 +35,7 @@ If you are using the `cordova-android-support-gradle-release` plugin it should m
 
 The following platforms and versions are supported by the latest release:
 
-- Android 4.4+ / iOS 9+ / Windows / Electron
+- Android 4.4+ / iOS 9+ / Electron
 - Cordova CLI 7.0 or higher
 
 Cordova CLI 6.0 is supported by 2.0.19, but there are a number of issues, particularly with Android builds (see [232](https://github.com/pwlin/cordova-plugin-file-opener2/issues/232) [203](https://github.com/pwlin/cordova-plugin-file-opener2/issues/203) [207](https://github.com/pwlin/cordova-plugin-file-opener2/issues/207)). Using the [cordova-android-support-gradle-release](https://github.com/dpa99c/cordova-android-support-gradle-release) plugin may help.

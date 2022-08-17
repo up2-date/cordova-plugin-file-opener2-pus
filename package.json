@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-file-opener2-pus",
-  "version": "3.0.5",
+  "version": "3.1.0",
   "description": "A File Opener Plugin for Cordova. (The Original Version)",
   "cordova": {
     "id": "cordova-plugin-file-opener2-pus",
@@ -26,9 +26,14 @@
   "author": {
     "name": "pwlin05@gmail.com"
   },
+  "contributors": [{
+    "name": "Daniel",
+    "email": "d.schneider@ipus.de",
+    "url": "https://github.com/up2-date/"
+  }],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pwlin/cordova-plugin-file-opener2/issues"
+    "url": "https://github.com/up2-date/cordova-plugin-file-opener2-pus/issues"
   },
-  "homepage": "https://github.com/pwlin/cordova-plugin-file-opener2#readme"
+  "homepage": "https://github.com/up2-date/cordova-plugin-file-opener2-pus#readme"
 }

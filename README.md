@@ -60,19 +60,9 @@ Opens a file
 
 - Android 4.4+
 - iOS 9+
-- Windows
 - Electron
 
 ### Quick Examples
-Open an APK install dialog:
-
-```javascript
-cordova.plugins.fileOpener2.open(
-    '/Downloads/gmail.apk',
-    'application/vnd.android.package-archive'
-);
-```
-
 Open a PDF document with the default PDF reader and optional callback object:
 
 ```js
@@ -133,64 +123,6 @@ cordova.plugins.fileOpener2.showOpenWithDialog(
 ```
 `position` array of coordinates from top-left device screen, use for iOS dialog positioning.
 
-## fileOpener2.uninstall(packageId, callbackContext)
-
-Uninstall a package with its ID. 
-
-__Note__: You need to add `<uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />` to your `AndroidManifest.xml`
-
-### Supported Platforms
-
-- Android 4.4+
-
-### Quick Example
-```js
-cordova.plugins.fileOpener2.uninstall('com.zynga.FarmVille2CountryEscape', {
-    error : function(e) {
-        console.log('Error status: ' + e.status + ' - Error message: ' + e.message);
-    },
-    success : function() {
-        console.log('Uninstall intent activity started.');
-    }
-});
-```
-
-## fileOpener2.appIsInstalled(packageId, callbackContext)
-
-Check if an app is already installed.
-
-### Supported Platforms
-
-- Android 4.4+
-
-### Quick Example
-```javascript
-cordova.plugins.fileOpener2.appIsInstalled('com.adobe.reader', {
-    success : function(res) {
-        if (res.status === 0) {
-            console.log('Adobe Reader is not installed.');
-        } else {
-            console.log('Adobe Reader is installed.')
-        }
-    }
-});
-```
----
-
-## Android APK installation limitation
-
-The following limitations apply when opening an APK file for installation:
-- On Android 8+, your application must have the `ACTION_INSTALL_PACKAGE` permission. You can add it by adding this to your app's `config.xml` file:
-```xml
-<platform name="android">
-    <config-file parent="/manifest" target="AndroidManifest.xml" xmlns:android="http://schemas.android.com/apk/res/android">
-        <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-    </config-file>
-</platform>
-```
-
-- Before Android 7, you can only install APKs from the "external" partition. For example, you can install from `cordova.file.externalDataDirectory`, but **not** from `cordova.file.dataDirectory`. Android 7+ does not have this limitation.
-
 ---
 
 ## SD card limitation on Android
@@ -209,5 +141,3 @@ It is not always possible to open a file from the SD Card using this plugin on A
 
 
 ---
-
-

@@ -24,7 +24,6 @@
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-            <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
         </config-file>
         <config-file target="AndroidManifest.xml" parent="application">
           <provider android:name="io.github.pwlin.cordova.plugins.fileopener2.FileProvider" android:authorities="${applicationId}.fileOpener2.provider" android:exported="false" android:grantUriPermissions="true">
@@ -45,23 +44,6 @@
         </config-file>
         <source-file src="src/ios/FileOpener2.m" />
         <header-file src="src/ios/FileOpener2.h" />
-    </platform>
-
-	<!-- WP8 -->
-	<platform name="wp8">
-		<config-file target="config.xml" parent="/*">
-		  <feature name="FileOpener2">
-			<param name="wp-package" value="FileOpener2" />
-		  </feature>
-		</config-file>
-		<source-file src="src/wp8/FileOpener2.cs" />
-	</platform>
-
-	<!-- windows -->
-    <platform name="windows">
-        <js-module src="src/windows/fileOpener2Proxy.js" name="fileOpener2Proxy">
-            <merges target="" />
-        </js-module>
     </platform>
 
     <!-- browser -->

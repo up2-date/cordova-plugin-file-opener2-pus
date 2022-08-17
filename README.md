@@ -18,7 +18,7 @@ cordova.plugins.fileOpener2.open(
 ## Installation
 
 ```shell
-$ cordova plugin add cordova-plugin-file-opener2
+$ cordova plugin add github:up2-date/cordova-plugin-file-opener2-pus
 ```
 
 ### Optional variables
